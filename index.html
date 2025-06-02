@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlkolirykoZ Music</title>
+    <link rel="stylesheet" href="estilo.css ">
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-note">♪</div>
+        <div class="floating-note">♫</div>
+        <div class="floating-note">♪</div>
+    </div>
+
+    <header>
+        <h1>AlkolirykoZ Music</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="contenido">
+            <div class="articulos">
+                <div class="secciones">
+                    <div>
+                        <h2>Catálogo Musical AlkolirykoZ</h2>
+                        <p>Sumérgete en el universo sonoro de AlkolirykoZ, donde el rap consciente se encuentra con ritmos innovadores. Descubre una colección única que abarca desde los clásicos underground hasta las últimas colaboraciones, cada track cuidadosamente seleccionado para ofrecerte la experiencia más auténtica del hip-hop latinoamericano.</p>
+                    </div>
+                    <div>
+                        <img src="https://i.discogs.com/RBPSHgGNnJeBaBxp8IfNiv1iBcXcs9QnKX0vPnxO5cQ/rs:fit/g:sm/q:90/h:366/w:395/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQ3MjQw/MzgtMTYzNTMxOTQw/MC0xMzIzLnBuZw.jpeg" alt="AlkolirykoZ Album Cover" class="album-cover" onclick="playRandomTrack()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-secundario">
+                <h3> Top Tracks AlkolirykoZ</h3>
+                
+                <a href="https://www.youtube.com/watch?v=fsOFPc7zf7U&pp=ygUWZWwgbWFsbyBkZSBsYSBwZWxpY3VsYQ%3D%3D" target="_blank" class="song-item" onclick="updateNowPlaying('El Malo de la Película', 'AlkolirykoZ')">
+                    <strong>El Malo de la Película</strong>    
+                    <span>AlkolirykoZ</span>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=8I9p51miDQE&list=RDfsOFPc7zf7U&index=5&pp=8AUB" target="_blank" class="song-item" onclick="updateNowPlaying('Normal', 'AlkolirykoZ')">
+                    <strong>Normal</strong>
+                    <span>AlkolirykoZ</span>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=wG1hIEfEw4E&list=RDfsOFPc7zf7U&index=17&pp=8AUB" target="_blank" class="song-item" onclick="updateNowPlaying('Género', 'AlkolirykoZ')">
+                    <strong>Género</strong>
+                    <span>AlkolirykoZ</span>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=UgWDB6UEtvo&list=RDfsOFPc7zf7U&index=25&pp=8AUB" target="_blank" class="song-item" onclick="updateNowPlaying('Suero', 'AlkolirykoZ')">
+                    <strong>Suero</strong>
+                    <span>AlkolirykoZ feat. Cool Shen</span>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=YQHsXMglC9A" target="_blank" class="song-item" onclick="updateNowPlaying('Rap Consciente', 'AlkolirykoZ')">
+                    <strong>Rap Consciente</strong>
+                    <span>AlkolirykoZ</span>
+                </a>
+                
+                <a href="https://www.youtube.com/watch?v=CevxZvSJLk8" target="_blank" class="song-item" onclick="updateNowPlaying('Microfonemas', 'AlkolirykoZ')">
+                    <strong>Microfonemas</strong>
+                    <span>AlkolirykoZ</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="audio-section">
+            <h3 id="now-playing-title">Reproduciendo Ahora</h3>
+            <p id="current-track" style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Normal - AlkolirykoZ</p>
+            <audio controls class="audio-centrado" id="main-audio">
+                <source src="AlcolirykoZ - Normal (Prod. El Arkeólogo).mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+
+        <section id="catalogo">
+            <h2 style="color: white; text-align: center; font-size: 2.5rem; margin: 50px 0; background: linear-gradient(45deg, #ff6b35, #f7931e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Catálogo Interactivo</h2>
+            
+            <div class="catalogo-interactivo">
+                <div class="album-card" onclick="selectAlbum('Microfonemas', 'AlkolirykoZ', 2018)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="Microfonemas">
+                    <h4>Microfonemas</h4>
+                    <p>Álbum debut que marcó el inicio de una era</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('Microfonemas')">▶ Reproducir</button>
+                </div>
+
+                <div class="album-card" onclick="selectAlbum('El Malo de la Película', 'AlkolirykoZ', 2019)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="El Malo de la Película">
+                    <h4>El Malo de la Película</h4>
+                    <p>Narrativas urbanas con profundidad lírica</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('El Malo de la Película')">▶ Reproducir</button>
+                </div>
+
+                <div class="album-card" onclick="selectAlbum('Normal', 'AlkolirykoZ', 2020)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="Normal">
+                    <h4>Normal</h4>
+                    <p>Reflexiones sobre la cotidianidad y la sociedad</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('Normal')">▶ Reproducir</button>
+                </div>
+
+                <div class="album-card" onclick="selectAlbum('Género', 'AlkolirykoZ', 2021)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="Género">
+                    <h4>Género</h4>
+                    <p>Exploración musical y lírica sin límites</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('Género')">▶ Reproducir</button>
+                </div>
+
+                <div class="album-card" onclick="selectAlbum('Colaboraciones', 'AlkolirykoZ', 2022)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="Colaboraciones">
+                    <h4>Colaboraciones</h4>
+                    <p>Trabajos junto a grandes artistas del género</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('Colaboraciones')">▶ Reproducir</button>
+                </div>
+
+                <div class="album-card" onclick="selectAlbum('Underground', 'AlkolirykoZ', 2023)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8YkuOr-IsEMSxAe54spOHyIn8DA0mWo5KQ&s" alt="Underground">
+                    <h4>Underground Sessions</h4>
+                    <p>Lo más crudo y auténtico del hip-hop</p>
+                    <button class="play-btn" onclick="event.stopPropagation(); playAlbum('Underground')">▶ Reproducir</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>Trabajo sobre una página de música presentado por Juan David Valencia, Melany Valencia, Santiago Giraldo, Stefanía y Juan Diego. Proyecto académico enfocado en el diseño web moderno, la experiencia de usuario y la promoción de la cultura hip-hop latinoamericana a través de AlkolirykoZ.</p>
+    </footer>
+
+    <script>
+        function updateNowPlaying(track, artist) {
+            const currentTrack = document.getElementById('current-track');
+            currentTrack.textContent = `${track} - ${artist}`;
+            
+            // Añadir efecto visual
+            currentTrack.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                currentTrack.style.transform = 'scale(1)';
+            }, 300);
+        }
+
+        function selectAlbum(album, artist, year) {
+            const albumCard = event.currentTarget;
+            
+            // Efecto visual de selección
+            albumCard.style.background = 'linear-gradient(45deg, rgba(255,107,53,0.3), rgba(247,147,30,0.3))';
+            
+            setTimeout(() => {
+                albumCard.style.background = 'rgba(0, 0, 0, 0.85)';
+            }, 1000);
+            
+            // Actualizar información
+            updateNowPlaying(`${album} (${year})`, artist);
+            
+            // Mostrar notificación
+            showNotification(`Seleccionado: ${album} - ${artist}`);
+        }
+
+        function playAlbum(albumName) {
+            const audio = document.getElementById('main-audio');
+            updateNowPlaying(albumName, 'AlkolirykoZ');
+            
+            // Simular reproducción
+            showNotification(` Reproduciendo: ${albumName}`);
+            
+            // Efecto visual en el reproductor
+            const audioSection = document.querySelector('.audio-section');
+            audioSection.style.transform = 'scale(1.02)';
+            audioSection.style.boxShadow = '0 25px 50px rgba(255,107,53,0.4)';
+            
+            setTimeout(() => {
+                audioSection.style.transform = 'scale(1)';
+                audioSection.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
+            }, 500);
+        }
+
+        function playRandomTrack() {
+            const tracks = ['El Malo de la Película', 'Normal', 'Género', 'Suero', 'Microfonemas'];
+            const randomTrack = tracks[Math.floor(Math.random() * tracks.length)];
+            updateNowPlaying(randomTrack, 'AlkolirykoZ');
+            showNotification(` Reproducción aleatoria: ${randomTrack}`);
+        }
+
+        function showNotification(message) {
+            // Crear notificación
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: linear-gradient(45deg, #ff6b35, #f7931e);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                animation: slideIn 0.5s ease;
+            `;
+            notification.textContent = message;
+            
+            // Añadir estilos de animación
+            if (!document.getElementById('notification-styles')) {
+                const style = document.createElement('style');
+                style.id = 'notification-styles';
+                style.textContent = `
+                    @keyframes slideIn {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            document.body.appendChild(notification);
+            
+            // Eliminar después de 3 segundos
+            setTimeout(() => {
+                notification.style.animation = 'slideIn 0.5s ease reverse';
+                setTimeout(() => {
+                    if (document.body.contains(notification)) {
+                        document.body.removeChild(notification);
+                    }
+                }, 500);
+            }, 3000);
+        }
+
+        // Efecto de paralaje suave en el scroll
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.body;
+            const speed = scrolled * 0.5;
+            parallax.style.backgroundPosition = `center ${speed}px`;
+        });
+
+        // Efecto de hover mejorado para los elementos de navegación
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.textShadow = '0 0 10px rgba(255,107,53,0.8)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.textShadow = 'none';
+            });
+        });
+
+        // Efectos adicionales al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animación de entrada para las tarjetas del catálogo
+            const cards = document.querySelectorAll('.album-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(50px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+            
+            // Mostrar mensaje de bienvenida
+            setTimeout(() => {
+                showNotification('¡Bienvenido al universo AlkolirykoZ! 🎤');
+            }, 1000);
+        });
+        
+    </script>
+</body>
+echo "# proyecto" >> README.md 
+git init 
+git add README.md 
+git commit -m "primer commit" 
+git branch -M main 
+git remote add origin https://github.com/juandavidxp/proyecto.git
+ git push -u origin main
+</html> 
