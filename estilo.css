@@ -13,7 +13,7 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
+        
         .floating-elements {
             position: fixed;
             top: 0;
@@ -326,5 +326,6 @@
             
             header h1 {
                 font-size: 2rem;
-            }
+            } 
+            
         }
